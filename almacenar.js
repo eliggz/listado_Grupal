@@ -1,19 +1,8 @@
-let valor = []
+let array = []
 let btnagregar = document.getElementById("agregar")
-
-btnagregar.addEventListener('click', function(){
-
-  valor.push(document.getElementById("item").value)
-
-  localStorage.setItem("array", JSON.stringify(valor))
-  valor.innerHTML
- 
-})
-
-
-
-
-function botonagregar(valor){}
-
-
-
+let item = document.getElementById("item")
+let foo = document.getElementById("foo")
+function mostrarListado(){
+  array.push(item.value)
+    document.getElementById("foo").innerHTML += array[array.length-1] + "<br>"
+}
