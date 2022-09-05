@@ -1,18 +1,19 @@
-function hacerTodo(){
-    let item=document.getElementById("item").value; 
-    let items = []
-    let cont = 0
-    if (item != "") {
-        window.localStorage.setItem("item", item.value)
-        while (cont++ < item.value) {
-        items.push(item.value())}
-    }
-    else{
-        alert("Item inválido")
-    }
-    }
-    
+let valor = []
+let btnagregar = document.getElementById("agregar")
 
-   function recibirItem(){
-        return item.value;
-    }
+btnagregar.addEventListener('click', function(){
+
+  valor.push(document.getElementById("item").value)
+
+  localStorage.setItem("array", JSON.stringify(valor))
+  valor.innerHTML
+ 
+})
+
+
+
+
+function botonagregar(valor){}
+
+
+
