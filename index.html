@@ -21,18 +21,21 @@
           <label for="Item" class="form-label">Nuevo ítem:</label>
           <input type="text" class="form-control" id="item">
           <div class="d-grid">
-            <button type="submit" class="btn btn-primary my-3" id="agregar">Agregar</button>
+            <button onclick="mostrarListado()" type="button" class="btn btn-primary my-3" id="agregar">Agregar</button>
           </div>
         </div>
         <div class="col-sm-8">
           <div class="border rounded-3 cont">
             <script>document.getElementById("item").innerHTML = localStorage.items</script>
             <ul class="list-group" id="contenedor">
+              <div id="foo">
+                <li id="li"></li>
+              </div>
             </ul>
           
           </div>
           <div class="float-end">
-            <button type="button" class="btn btn-outline-danger my-3" id="limpiar">Limpiar</button>
+            <button onclick="clear()" type="button" class="btn btn-outline-danger my-3" id="limpiar">Limpiar</button>
           </div>
         </div>
       </div>
